@@ -1,0 +1,672 @@
+[
+  {
+    "id": 1,
+    "name": "Medicall Chennai 2026",
+    "date": "2026-07-24",
+    "dateDisplay": "Jul 24–26, 2026",
+    "location": "Chennai Trade Centre, Chennai",
+    "month": "July 2026",
+    "priority": "must-attend",
+    "tags": ["t-gen", "t-si"],
+    "about": "India's largest B2B medical equipment exhibition — 47th edition. 750+ exhibitors, 30,000+ visitors, 20+ countries. Features expo floor, Brainstorm Medicall seminars, and the Medicall Innovation Awards. Organised by Medexpert (promoted by Dr Manivannan S, MD of Kauvery Hospitals).",
+    "keyFacts": ["750+ exhibitors", "30,000+ visitors", "90+ seminars", "Medverse Innovation Award notification Jul 25"],
+    "participation": [
+      {
+        "icon": "🎟️",
+        "name": "Visitor Entry",
+        "fee": "FREE",
+        "feeClass": "fee-free",
+        "detail": "Online pre-registration at medicall.in. Walk in with confirmation QR. Full expo access 10 AM–6 PM all 3 days.",
+        "verdict": "do",
+        "verdictLabel": "✓ Register now — you're already attending",
+        "deadline": "Register before Jul 22 to skip queues",
+        "deadlineDate": "2026-07-22"
+      },
+      {
+        "icon": "🎓",
+        "name": "Brainstorm Medicall Seminar (Delegate Pass)",
+        "fee": "₹500–2,000 est.",
+        "feeClass": "fee-paid",
+        "detail": "Paid delegate passes for hospital management seminars. AI in healthcare, hospital IT tracks. Delegate badge + expo access.",
+        "verdict": "do",
+        "verdictLabel": "✓ Book at least 1 session — AI/Hospital IT track is your audience",
+        "deadline": "Book via medicall.in/conferenceandseminar.php before Jul 22",
+        "deadlineDate": "2026-07-22"
+      },
+      {
+        "icon": "🏆",
+        "name": "Medicall Innovation Award",
+        "fee": "FREE to apply",
+        "feeClass": "fee-free",
+        "detail": "Open to healthcare IT companies and startups. Past winner in fertility: SpOvum Technologies (RoboICSI for fertility clinics) won Motivational Award. Fertiva Pro fits Category: Healthcare IT / Hospital Management Software.",
+        "verdict": "do",
+        "verdictLabel": "✓ APPLY — fertility-tech SaaS has won here before",
+        "deadline": "Application closes ~Jul 20. Check medicall.in/innovation.php",
+        "deadlineDate": "2026-07-20"
+      },
+      {
+        "icon": "🏢",
+        "name": "Exhibitor Stall",
+        "fee": "₹1.5–3L for 9 sqm shell",
+        "feeClass": "fee-paid",
+        "detail": "Minimum 9 sqm shell scheme. Stall space nearly sold out — sold-out warning active on site. Healthcare IT Pavilion is the right category.",
+        "verdict": "consider",
+        "verdictLabel": "⚠ Stalls nearly sold out — call +91 7305 789 789 immediately",
+        "deadline": "SOLD OUT WARNING — call immediately",
+        "deadlineDate": "2026-07-05"
+      }
+    ],
+    "attendYes": true,
+    "reasons": [
+      "Already committed — Medverse Innovation Award notification on Jul 25.",
+      "Your lanyard + QR code are ready — passive lead generation across 3 days.",
+      "Brainstorm Medicall AI/hospital-IT seminar = room full of hospital decision-makers.",
+      "Medicall Innovation Award: fertility-tech SaaS fits. Prior winner SpOvum was a fertility startup.",
+      "Post-award press release trigger — win or shortlist unlocks your 8-outlet PR campaign."
+    ],
+    "note": "💡 Action: Register visitor pass at medicall.in. Apply for Innovation Award at medicall.in/innovation.php before July 20. Book Brainstorm seminar same page.",
+    "urls": [
+      { "label": "Register Visitor", "url": "https://www.medicall.in/medical-exhibition-registration-online.php", "cls": "btn-primary" },
+      { "label": "Innovation Award", "url": "https://www.medicall.in/innovation.php", "cls": "btn-award" },
+      { "label": "Brainstorm Seminar", "url": "https://www.medicall.in/conferenceandseminar.php", "cls": "btn-secondary" }
+    ],
+    "source": "https://www.medicall.in",
+    "lastUpdated": "2026-07-05"
+  },
+  {
+    "id": 2,
+    "name": "Medverse Awards 2026",
+    "date": "2026-07-15",
+    "dateDisplay": "Apply by Aug 31 | Ceremony Sep 27",
+    "location": "Salem, Tamil Nadu",
+    "month": "July 2026",
+    "priority": "award",
+    "tags": ["t-award", "t-si"],
+    "about": "Medverse 2026 Healthcare Excellence Awards — 27 categories across Individual Excellence, Social Impact, Institutional Excellence, and Healthcare Startups. Nominations open July 15, close August 31. Shortlist announced September 15. Ceremony at Medverse 2026 on September 27.",
+    "keyFacts": ["27 award categories", "Nomination fee: ₹1,000", "Shortlist Sep 15", "Ceremony Sep 27, Salem"],
+    "participation": [
+      {
+        "icon": "🏆",
+        "name": "Category 21 — Outstanding Healthcare Startup of the Year",
+        "fee": "₹1,000 nomination fee",
+        "feeClass": "fee-paid",
+        "detail": "For healthcare startups making significant impact. Fertiva Pro qualifies as a B2B IVF clinic management SaaS with documented features and compliance stack.",
+        "verdict": "do",
+        "verdictLabel": "✓ Apply — this is the obvious category for Fertiva Pro",
+        "deadline": "Opens Jul 15 | Closes Aug 31",
+        "deadlineDate": "2026-08-31"
+      },
+      {
+        "icon": "🏆",
+        "name": "Category 22 — Most Innovative HealthTech Startup",
+        "fee": "₹1,000 nomination fee",
+        "feeClass": "fee-paid",
+        "detail": "Fertiva Pro's 12 AI features, 22-language voice transcription, and DPDP compliance make this a strong fit. You can nominate in 2 categories.",
+        "verdict": "do",
+        "verdictLabel": "✓ Apply as second category — same ₹1,000 fee covers 2 categories",
+        "deadline": "Opens Jul 15 | Closes Aug 31",
+        "deadlineDate": "2026-08-31"
+      },
+      {
+        "icon": "🏆",
+        "name": "Category 06 — Healthcare Entrepreneur of the Year",
+        "fee": "₹1,000 nomination fee",
+        "feeClass": "fee-paid",
+        "detail": "For the founder (Muthu). Your origin story (fertility patient → founder) + solo build of ICMR-compliant SaaS is compelling.",
+        "verdict": "consider",
+        "verdictLabel": "⚠ Consider as 3rd category — adds credibility for deal conversations",
+        "deadline": "Opens Jul 15 | Closes Aug 31",
+        "deadlineDate": "2026-08-31"
+      }
+    ],
+    "attendYes": true,
+    "reasons": [
+      "₹1,000 for two categories is effectively free credibility if shortlisted.",
+      "Shortlist announcement Sep 15 = PR trigger for a second wave of press releases before Fertivision.",
+      "Ceremony is at Medverse Expo Sep 26–27 — you'll be exhibiting anyway."
+    ],
+    "note": "💡 Action: Nominations open July 15 at medverse.co.in/medverse-awards-2026-nominations. Apply Day 1.",
+    "urls": [
+      { "label": "Apply for Award (₹1,000)", "url": "https://medverse.co.in/medverse-awards-2026-nominations", "cls": "btn-award" },
+      { "label": "Medverse Website", "url": "https://medverse.co.in/", "cls": "btn-secondary" }
+    ],
+    "source": "https://medverse.co.in",
+    "lastUpdated": "2026-07-05"
+  },
+  {
+    "id": 3,
+    "name": "ISAR INSPIRE Fertility Conclave",
+    "date": "2026-08-01",
+    "dateDisplay": "Aug 1–2, 2026",
+    "location": "Chennai",
+    "month": "August 2026",
+    "priority": "must-attend",
+    "tags": ["t-ivf", "t-si"],
+    "about": "ISAR's mid-year fertility conclave for IVF specialists, embryologists, and reproductive medicine professionals. ISAR has 7,500+ active members — India's premier ART professional network. Conclave = smaller, curated format. Back-to-back with Medicall — same Chennai trip.",
+    "keyFacts": ["7,500+ ISAR members", "IVF specialists only", "Chennai = home market", "Back-to-back with Medicall"],
+    "participation": [
+      {
+        "icon": "🎟️",
+        "name": "Delegate (Attendee) Registration",
+        "fee": "₹2,000–5,000 est.",
+        "feeClass": "fee-paid",
+        "detail": "Standard conference delegate registration. Includes all scientific sessions, networking lunches, and workshop access. Check isarindia.net for exact fee.",
+        "verdict": "do",
+        "verdictLabel": "✓ Register as delegate — every attendee is a potential client",
+        "deadline": "Registration opens ~Jul 1. Book early.",
+        "deadlineDate": "2026-07-15"
+      },
+      {
+        "icon": "🤝",
+        "name": "Vendor / Industry Exhibit",
+        "fee": "₹50,000–1.5L est.",
+        "feeClass": "fee-paid",
+        "detail": "Industry exhibit table or kiosk inside the conclave venue. Direct access to 200–500 IVF doctors and embryologists. Contact ISAR organising committee via isarindia.net.",
+        "verdict": "do",
+        "verdictLabel": "✓ Strongly recommend — this is your bullseye audience",
+        "deadline": "Contact ISAR organising committee now — limited vendor slots",
+        "deadlineDate": "2026-07-15"
+      },
+      {
+        "icon": "💎",
+        "name": "Sponsorship (Session / Lunch / Bag)",
+        "fee": "₹50K–3L depending on tier",
+        "feeClass": "fee-paid",
+        "detail": "Session co-sponsorship, conference bag insert, lunch sponsorship. Branded visibility with the IVF specialist audience.",
+        "verdict": "consider",
+        "verdictLabel": "⚠ Consider if exhibitor slot unavailable",
+        "deadline": null,
+        "deadlineDate": null
+      }
+    ],
+    "attendYes": true,
+    "reasons": [
+      "Highest IVF-specific ROI event on your calendar. Every attendee buys or recommends clinic management software.",
+      "One Chennai trip covers Medicall (Jul 24–26) + ISAR INSPIRE (Aug 1–2) — two #1 events back-to-back.",
+      "DPDP compliance + ICMR ART 2021 built-in = the exact pain points ISAR doctors need solved.",
+      "Coming off Medicall with award momentum gives you a credible narrative."
+    ],
+    "note": "💡 Action: Email ISAR at isarindia.net TODAY to request vendor/exhibitor slot for Aug 1–2.",
+    "urls": [
+      { "label": "ISAR Events Page", "url": "https://www.isarindia.net/", "cls": "btn-primary" }
+    ],
+    "source": "https://www.isarindia.net",
+    "lastUpdated": "2026-07-05"
+  },
+  {
+    "id": 4,
+    "name": "IHFC–IIT Delhi MedTech Impact Call 2026",
+    "date": "2026-08-01",
+    "dateDisplay": "Rolling applications | Demo Day Aug 2026 est.",
+    "location": "IIT Delhi + Virtual",
+    "month": "August 2026",
+    "priority": "award",
+    "tags": ["t-award", "t-ai", "t-ht"],
+    "about": "IHFC (I-Hub Foundation for Cobotics at IIT Delhi) in collaboration with India Accelerator — MedTech startup funding and incubation program. Focus areas: Digital Health, AI-driven diagnostics, Telemedicine, and Health IT. Selected startups get co-investment up to ₹5 crore plus IIT Delhi mentorship and investor access.",
+    "keyFacts": ["Up to ₹5 crore co-investment", "IIT Delhi academic backing", "India Accelerator ecosystem", "Digital Health + AI-driven health track"],
+    "participation": [
+      {
+        "icon": "🚀",
+        "name": "Startup Application",
+        "fee": "FREE to apply",
+        "feeClass": "fee-free",
+        "detail": "Open to registered Indian startups with MVP or validated prototype (TRL ≥ 4). Fertiva Pro has production-deployed AI features = TRL ≥ 5. Apply at ihfc.iitd.ac.in.",
+        "verdict": "do",
+        "verdictLabel": "✓ Apply — Fertiva Pro qualifies with live deployments",
+        "deadline": "Check ihfc.iitd.ac.in for current cohort deadline",
+        "deadlineDate": "2026-07-30"
+      }
+    ],
+    "attendYes": true,
+    "reasons": [
+      "₹5 crore co-investment could fund Fertiva Pro's Pvt Ltd conversion and BD expansion.",
+      "IIT Delhi academic credibility improves investor and hospital group conversations.",
+      "Digital Health + AI track = exact fit with Fertiva Pro's 12 production-deployed AI features.",
+      "No equity demanded upfront — structured co-investment."
+    ],
+    "note": "💡 Action: Visit ihfc.iitd.ac.in immediately. If 2026 cohort is closed, get on 2027 waitlist.",
+    "urls": [
+      { "label": "IHFC Website", "url": "https://ihfc.iitd.ac.in", "cls": "btn-primary" }
+    ],
+    "source": "https://ihfc.iitd.ac.in",
+    "lastUpdated": "2026-07-05"
+  },
+  {
+    "id": 5,
+    "name": "India Health 2026 (Informa Markets)",
+    "date": "2026-08-21",
+    "dateDisplay": "Aug 21–23, 2026",
+    "location": "Bharat Mandapam, New Delhi",
+    "month": "August 2026",
+    "priority": "strong-value",
+    "tags": ["t-ht", "t-ai"],
+    "about": "3rd edition of Informa Markets' flagship India healthcare expo — organisers of Arab Health (WHX Dubai). Expanded focus on medical manufacturing, digital health, and global partnerships. 300+ brands, 8,000+ stakeholders, 35+ conference sessions, 80+ speakers. Includes India HealthNext Awards and a B2B matchmaking app.",
+    "keyFacts": ["300+ brands", "8,000+ stakeholders", "35+ conference sessions", "India HealthNext Awards", "Free visitor entry"],
+    "participation": [
+      {
+        "icon": "🎟️",
+        "name": "Visitor Entry",
+        "fee": "FREE",
+        "feeClass": "fee-free",
+        "detail": "Free visitor registration at indiahealth-exhibition.com. Full expo + conference session access.",
+        "verdict": "do",
+        "verdictLabel": "✓ Register free — combine with Delhi investor meetings",
+        "deadline": "Register at indiahealth-exhibition.com",
+        "deadlineDate": "2026-08-20"
+      },
+      {
+        "icon": "🏆",
+        "name": "India HealthNext Awards",
+        "fee": "TBC (likely free/low fee)",
+        "feeClass": "fee-contact",
+        "detail": "Curated awards at India Health's evening networking event. Digital health and healthtech categories expected. Contact mehraj.waghu@informa.com for details.",
+        "verdict": "do",
+        "verdictLabel": "✓ Apply — digital health/AI track aligns perfectly",
+        "deadline": "Check indiahealth-exhibition.com for award details",
+        "deadlineDate": "2026-08-01"
+      },
+      {
+        "icon": "🎤",
+        "name": "Speaker / Session Presenter",
+        "fee": "FREE (by application)",
+        "feeClass": "fee-free",
+        "detail": "35+ sessions covering AI-led diagnostics and digital health. Submit speaker proposal on AI in IVF clinic management.",
+        "verdict": "consider",
+        "verdictLabel": "⚠ Apply to speak — your 12 AI features story is unique content",
+        "deadline": "Contact Informa: mehraj.waghu@informa.com",
+        "deadlineDate": "2026-07-15"
+      },
+      {
+        "icon": "🏢",
+        "name": "Exhibitor Stall",
+        "fee": "₹3–8L for min 9 sqm",
+        "feeClass": "fee-paid",
+        "detail": "Premium Informa pricing. Not recommended at this stage — better to visit free and do parallel meetings.",
+        "verdict": "skip",
+        "verdictLabel": "✗ Skip stall — premium cost for non-IVF general audience",
+        "deadline": null,
+        "deadlineDate": null
+      }
+    ],
+    "attendYes": true,
+    "reasons": [
+      "Digital health and AI-led diagnostics conference track = your exact product story.",
+      "Healthcare IT decision-makers and hospital CXOs attend — multi-specialty hospital expansion targets.",
+      "Free visitor entry — low cost, high exposure.",
+      "India HealthNext Awards: digital health/AI category aligns with Fertiva Pro's 12 AI features."
+    ],
+    "note": "💡 Action: Register free at indiahealth-exhibition.com. Email mehraj.waghu@informa.com to explore speaker opportunity. Plan Delhi trip around Aug 21–25.",
+    "urls": [
+      { "label": "Register Free", "url": "https://www.indiahealth-exhibition.com/", "cls": "btn-primary" },
+      { "label": "Exhibitor Info", "url": "https://www.indiahealth-exhibition.com/", "cls": "btn-secondary" }
+    ],
+    "source": "https://www.indiahealth-exhibition.com",
+    "lastUpdated": "2026-07-05"
+  },
+  {
+    "id": 6,
+    "name": "ESHRE Campus Workshop — Endometriosis",
+    "date": "2026-09-06",
+    "dateDisplay": "Sep 6, 2026",
+    "location": "India (venue TBC)",
+    "month": "September 2026",
+    "priority": "must-attend",
+    "tags": ["t-ivf"],
+    "about": "International workshop on Endometriosis organised jointly by ESHRE (European Society of Human Reproduction and Embryology), IFS, and ISAR. International-quality faculty, curated senior audience of embryologists and gynecologists. Workshop format = small room, deep access to senior IVF specialists.",
+    "keyFacts": ["ESHRE + IFS + ISAR co-organisation", "Senior IVF specialists + embryologists", "Workshop format — 50–150 attendees", "International faculty"],
+    "participation": [
+      {
+        "icon": "🎟️",
+        "name": "Delegate Registration",
+        "fee": "₹3,000–8,000 est.",
+        "feeClass": "fee-paid",
+        "detail": "Paid delegate pass. Contact indianfertilitysociety.org for registration details. Workshop capacity is limited — register early.",
+        "verdict": "do",
+        "verdictLabel": "✓ Register — small room = high-quality conversations with senior buyers",
+        "deadline": "Check indianfertilitysociety.org for exact dates and fees",
+        "deadlineDate": "2026-08-15"
+      },
+      {
+        "icon": "🤝",
+        "name": "Industry Partner / Sponsor",
+        "fee": "₹25K–1L est.",
+        "feeClass": "fee-paid",
+        "detail": "Industry sponsorship for ESHRE campus events. Workshop bag insert or session co-sponsorship gets brand in front of 50–150 senior specialists.",
+        "verdict": "consider",
+        "verdictLabel": "⚠ Consider if budget allows — ESHRE badge gives international credibility",
+        "deadline": null,
+        "deadlineDate": null
+      }
+    ],
+    "attendYes": true,
+    "reasons": [
+      "ESHRE + IFS + ISAR = international stamp on an intimate Indian event. Highest signal attendees.",
+      "Endometriosis management is a documented clinical workflow in Fertiva Pro.",
+      "Post-ISAR INSPIRE (Aug) — attendees recognise you from last month. Relationship deepens.",
+      "Workshop format: no expo floor noise, real conversations about clinical software needs."
+    ],
+    "note": "💡 Action: Check indianfertilitysociety.org for venue and registration details when published. Mark calendar now.",
+    "urls": [
+      { "label": "IFS Events Page", "url": "https://indianfertilitysociety.org/conferences-and-events/", "cls": "btn-primary" }
+    ],
+    "source": "https://indianfertilitysociety.org",
+    "lastUpdated": "2026-07-05"
+  },
+  {
+    "id": 7,
+    "name": "Medverse Hospital Growth Expo 2026",
+    "date": "2026-09-26",
+    "dateDisplay": "Sep 26–27, 2026",
+    "location": "Sree Varalakshmi Mahal, Salem, TN",
+    "month": "September 2026",
+    "priority": "must-attend",
+    "tags": ["t-ht", "t-si"],
+    "about": "Second edition of South India's most actionable healthcare business summit. 2025 had 5,000+ visitors, 120+ stalls, 3,000+ doctors, and 1,430+ leads generated. 2026 target: 8,000+ audience, 200+ stalls, 50+ knowledge sessions. Medverse Award ceremony also on Sep 27.",
+    "keyFacts": ["8,000+ expected audience", "200+ stalls planned", "50+ knowledge sessions", "Medverse Award ceremony Sep 27"],
+    "participation": [
+      {
+        "icon": "🎟️",
+        "name": "Free Visitor / Delegate Pass",
+        "fee": "FREE",
+        "feeClass": "fee-free",
+        "detail": "Register at medverse.co.in. Open to doctors, hospital owners, and healthcare professionals.",
+        "verdict": "do",
+        "verdictLabel": "✓ Register as visitor — minimum commitment, maximum networking",
+        "deadline": "Register at medverse.co.in anytime",
+        "deadlineDate": "2026-09-20"
+      },
+      {
+        "icon": "🏢",
+        "name": "Exhibitor Stall",
+        "fee": "Contact for pricing (₹30K–1L est.)",
+        "feeClass": "fee-contact",
+        "detail": "Book via Zoho form at medverse.co.in. 2025 had 120+ stalls. 2026 targets 200+. Direct access to hospital buyers, clinic owners, and procurement heads.",
+        "verdict": "do",
+        "verdictLabel": "✓ Book a stall — home-ground event, Tamil Nadu IVF clinic buyers",
+        "deadline": "Book stall now — fills up early. Contact: +91 95006 96461",
+        "deadlineDate": "2026-08-01"
+      },
+      {
+        "icon": "🎤",
+        "name": "Startup Pitch Stage",
+        "fee": "Included with exhibitor / separate TBC",
+        "feeClass": "fee-contact",
+        "detail": "Startups pitch live to investors, hospital chains, and industry buyers. Doctor + VC panel validation. 2025 had 100 medical startup pitches.",
+        "verdict": "do",
+        "verdictLabel": "✓ Apply for pitch slot — live funding/deal conversation opportunity",
+        "deadline": "Contact inquiry@medverse.co.in to apply for pitch slot",
+        "deadlineDate": "2026-08-15"
+      },
+      {
+        "icon": "💎",
+        "name": "Sponsorship",
+        "fee": "Contact for pricing",
+        "feeClass": "fee-contact",
+        "detail": "Brand exposure to 8,000+ attendees. Google Sponsor form available on Medverse website.",
+        "verdict": "consider",
+        "verdictLabel": "⚠ Consider if budget allows after stall booking",
+        "deadline": null,
+        "deadlineDate": null
+      }
+    ],
+    "attendYes": true,
+    "reasons": [
+      "Medverse Award ceremony is Sep 27 — you need to be there if shortlisted.",
+      "Tamil Nadu hospital owners = your primary customer segment.",
+      "Startup pitch stage gives you live deal conversations with investors and hospital chains.",
+      "2025 generated 1,430+ leads for exhibitors — strong ROI for B2B SaaS.",
+      "Home ground advantage: Salem is nearby Coimbatore."
+    ],
+    "note": "💡 Action: Book stall via medverse.co.in NOW — stalls fill up. Apply for startup pitch slot via inquiry@medverse.co.in.",
+    "urls": [
+      { "label": "Book a Stall", "url": "https://forms.zohopublic.in/inquirymedv1/form/StallBookingApplication/formperma/cIhC9Dn3dPo4XhacxqYqfaNaSCIV7hhgSpXFekdrKCM", "cls": "btn-primary" },
+      { "label": "Medverse Website", "url": "https://medverse.co.in/", "cls": "btn-secondary" }
+    ],
+    "source": "https://medverse.co.in",
+    "lastUpdated": "2026-07-05"
+  },
+  {
+    "id": 8,
+    "name": "India Med Expo — Bengaluru",
+    "date": "2026-09-05",
+    "dateDisplay": "Sep 5–7, 2026",
+    "location": "BIEC, Bengaluru",
+    "month": "September 2026",
+    "priority": "situational",
+    "tags": ["t-ht", "t-gen"],
+    "about": "Premier B2B medical exhibition connecting hospital owners, doctors, distributors, and procurement heads. Healthcare IT is an explicit product category. Bengaluru = Karnataka market beyond Tamil Nadu. Good concurrent with Medverse Sep trip.",
+    "keyFacts": ["Healthcare IT exhibit category", "Hospital decision-makers", "Karnataka market", "Combine with Medverse Sep trip"],
+    "participation": [
+      {
+        "icon": "🎟️",
+        "name": "Free Visitor",
+        "fee": "FREE",
+        "feeClass": "fee-free",
+        "detail": "Pre-register at indiamedexpo.com. Attend as industry visitor, collect contacts, schedule follow-up demos.",
+        "verdict": "do",
+        "verdictLabel": "✓ Visit — plan alongside Medverse Expo (Sep 26) for combined South India trip",
+        "deadline": "Register at indiamedexpo.com",
+        "deadlineDate": "2026-09-04"
+      },
+      {
+        "icon": "🏢",
+        "name": "Exhibitor Stall",
+        "fee": "₹30K–80K est.",
+        "feeClass": "fee-paid",
+        "detail": "Minimum 9 sqm shell scheme. Healthcare IT category relevant but audience is more general hospital supply buyers.",
+        "verdict": "consider",
+        "verdictLabel": "⚠ Only if budget allows after Medverse",
+        "deadline": null,
+        "deadlineDate": null
+      }
+    ],
+    "attendYes": true,
+    "reasons": [
+      "Bengaluru has dense private IVF clinic ecosystem — high-value adjacent market.",
+      "Sep 5–7 Bengaluru + Sep 26–27 Salem = one productive South India trip covering two events.",
+      "Attend as visitor, schedule parallel IVF clinic demos the same trip."
+    ],
+    "note": "💡 Action: Combine with Bengaluru IVF clinic outreach. Pre-book 5–6 direct clinic meetings around Sep 5–7 alongside the expo visit.",
+    "urls": [
+      { "label": "India Med Expo", "url": "https://indiamedexpo.com/visitor-registration-bengaluru-2026/", "cls": "btn-primary" }
+    ],
+    "source": "https://indiamedexpo.com",
+    "lastUpdated": "2026-07-05"
+  },
+  {
+    "id": 9,
+    "name": "National Startup Awards (NSA) 5.0",
+    "date": "2026-09-01",
+    "dateDisplay": "Watch for NSA 6.0 | 2027",
+    "location": "New Delhi (Virtual application)",
+    "month": "September 2026",
+    "priority": "award",
+    "tags": ["t-award", "t-ht"],
+    "about": "Government of India's DPIIT-run National Startup Awards. ₹10 lakh cash prize per winning category. Winners get investor connect, government pilot support, and priority for national/international startup events. Health-tech category specifically honors startups improving healthcare outcomes.",
+    "keyFacts": ["₹10 lakh prize per category", "DPIIT recognition required", "Health-tech category included", "Winners get investor access + government connect"],
+    "participation": [
+      {
+        "icon": "🚀",
+        "name": "HealthTech Category Application",
+        "fee": "FREE",
+        "feeClass": "fee-free",
+        "detail": "Requires DPIIT recognition (free process at startupindia.gov.in). NSA 5.0 applications appear closed. Apply for DPIIT recognition now to be ready for NSA 6.0.",
+        "verdict": "do",
+        "verdictLabel": "✓ Get DPIIT recognition now — unlocks NSA + government scheme eligibility",
+        "deadline": "NSA 5.0 closed. Watch for NSA 6.0 in early 2027.",
+        "deadlineDate": "2027-01-01"
+      }
+    ],
+    "attendYes": true,
+    "reasons": [
+      "₹10L prize + investor connect + government pilot = non-dilutive capital + enterprise credibility.",
+      "DPIIT recognition itself adds credibility for ABDM/ABHA integration conversations.",
+      "NSA winners get priority for DPIIT's national/international startup event representation."
+    ],
+    "note": "💡 Action: Apply for DPIIT recognition NOW at startupindia.gov.in — it's free and takes 2–4 weeks. Unlocks NSA + multiple government schemes.",
+    "urls": [
+      { "label": "Startup India (DPIIT)", "url": "https://www.startupindia.gov.in/content/sih/en/nsa2025.html", "cls": "btn-primary" }
+    ],
+    "source": "https://www.startupindia.gov.in",
+    "lastUpdated": "2026-07-05"
+  },
+  {
+    "id": 10,
+    "name": "Global Digital Health Summit (GDHS) 2026",
+    "date": "2026-11-20",
+    "dateDisplay": "Nov 20–21, 2026",
+    "location": "Bharat Mandapam, New Delhi",
+    "month": "November 2026",
+    "priority": "strong-value",
+    "tags": ["t-ai", "t-ht"],
+    "about": "World's most influential summit on AI implementation in healthcare. Theme: 'AI in Action'. 6,645 attendees at previous edition, 97.6% rated 'Outstanding'. Speakers include global healthcare CXOs, hospital administrators, and AI experts. Includes Expo and Innovation Awards.",
+    "keyFacts": ["6,645+ attendees", "97.6% 'Outstanding' rating", "AI in Action theme", "Innovation Awards included"],
+    "participation": [
+      {
+        "icon": "🎟️",
+        "name": "Delegate Pass",
+        "fee": "₹5,000–15,000 est.",
+        "feeClass": "fee-paid",
+        "detail": "Full 2-day access to summit, expo, and awards. Check current pricing at globalsummit.health.",
+        "verdict": "do",
+        "verdictLabel": "✓ Attend — AI in healthcare is your entire product story",
+        "deadline": "Check globalsummit.health for current pricing phase",
+        "deadlineDate": "2026-10-01"
+      },
+      {
+        "icon": "🏆",
+        "name": "GDHS Innovation Awards",
+        "fee": "Likely FREE / nominal",
+        "feeClass": "fee-contact",
+        "detail": "Innovation awards are a GDHS fixture. Digital health, AI in diagnostics, and health IT categories. Apply via globalsummit.health.",
+        "verdict": "do",
+        "verdictLabel": "✓ Apply for Innovation Award — AI IVF SaaS is highly differentiated",
+        "deadline": "Check globalsummit.health for award submission deadline",
+        "deadlineDate": "2026-10-01"
+      },
+      {
+        "icon": "🎤",
+        "name": "Speaker / Presenter",
+        "fee": "FREE (by selection)",
+        "feeClass": "fee-free",
+        "detail": "Global summit actively seeks AI implementation case studies. Your 22-language voice transcription + DPDP-compliant AI clinical scribe is unique material.",
+        "verdict": "do",
+        "verdictLabel": "✓ Submit speaker proposal — 'AI in IVF clinic management' is a unique slot",
+        "deadline": "Email office@globalsummit.health with speaker brief",
+        "deadlineDate": "2026-09-01"
+      }
+    ],
+    "attendYes": true,
+    "reasons": [
+      "'AI in Action' theme is Fertiva Pro's product story in 3 words.",
+      "By November you have Medicall + ISAR + Medverse + GDHS Awards on your credential stack.",
+      "Hospital administrators here evaluate AI solutions — your multi-specialty hospital expansion targets.",
+      "Speaking slot on AI in IVF = national thought leadership positioning."
+    ],
+    "note": "💡 Action: Email office@globalsummit.health now with a speaker abstract on 'AI in IVF Clinic Management — DPDP-compliant, 22-language'. Secure delegate ticket.",
+    "urls": [
+      { "label": "GDHS Website", "url": "https://www.globalsummit.health/", "cls": "btn-primary" },
+      { "label": "Register Delegate", "url": "https://www.globalsummit.health/gdhs2026", "cls": "btn-secondary" }
+    ],
+    "source": "https://www.globalsummit.health",
+    "lastUpdated": "2026-07-05"
+  },
+  {
+    "id": 11,
+    "name": "Fertivision 2026 — IFS Annual Conference",
+    "date": "2026-12-18",
+    "dateDisplay": "Dec 18–20, 2026",
+    "location": "Kolkata",
+    "month": "December 2026",
+    "priority": "must-attend",
+    "tags": ["t-ivf"],
+    "about": "22nd Annual Conference of the Indian Fertility Society. Theme: 'Practice with Precision'. Covers precision medicine, AI in reproductive care, and the latest ART advancements. IFS has 1,000+ fertility specialists nationally. Dedicated exhibition floor alongside scientific sessions.",
+    "keyFacts": ["IFS: 1,000+ fertility specialists", "Theme: Practice with Precision", "Exhibition floor included", "Annual national flagship for IFS"],
+    "participation": [
+      {
+        "icon": "🎟️",
+        "name": "Non-Member Delegate",
+        "fee": "₹8,000–15,000 est.",
+        "feeClass": "fee-paid",
+        "detail": "Open to industry professionals. Contact fertivision2026.com for registration. Scientific sessions + exhibition access.",
+        "verdict": "do",
+        "verdictLabel": "✓ Register as industry delegate",
+        "deadline": "Check fertivision2026.com — opens ~Sep 2026",
+        "deadlineDate": "2026-11-01"
+      },
+      {
+        "icon": "🏢",
+        "name": "Industry Exhibitor Stall",
+        "fee": "₹60,000–2L est. for min stall",
+        "feeClass": "fee-paid",
+        "detail": "Exhibition floor at IFS national conference. Direct access to 500–1,000 IVF specialists. Stalls fill fast — book by Oct.",
+        "verdict": "do",
+        "verdictLabel": "✓ Book stall — national IVF audience, perfect year-end push",
+        "deadline": "Book by Oct 2026 — email via fertivision2026.com",
+        "deadlineDate": "2026-10-15"
+      },
+      {
+        "icon": "🏆",
+        "name": "IFS Innovation Award",
+        "fee": "Apply via IFS secretariat",
+        "feeClass": "fee-contact",
+        "detail": "IFS runs achievement and innovation awards at Fertivision. Check indianfertilitysociety.org for Fertivision 2026 award categories.",
+        "verdict": "do",
+        "verdictLabel": "✓ Apply for any innovation / digital health award category",
+        "deadline": null,
+        "deadlineDate": null
+      }
+    ],
+    "attendYes": true,
+    "reasons": [
+      "'Practice with Precision' theme = Fertiva Pro's exact value proposition in 3 words.",
+      "By December, you'll have 5 months of post-Medicall traction and case studies.",
+      "Exhibition floor puts you directly in front of the national IVF specialist community.",
+      "East India market exposure — Kolkata edition opens Bengal, Odisha, and North-East clinics."
+    ],
+    "note": "💡 Action: Visit fertivision2026.com now to register and enquire about exhibitor packages. Budget ₹80K–1.5L for stall + travel. One signed client covers the full cost.",
+    "urls": [
+      { "label": "Fertivision 2026 Website", "url": "http://fertivision2026.com/", "cls": "btn-primary" },
+      { "label": "IFS Events", "url": "https://indianfertilitysociety.org/conferences-and-events/", "cls": "btn-secondary" }
+    ],
+    "source": "http://fertivision2026.com",
+    "lastUpdated": "2026-07-05"
+  },
+  {
+    "id": 12,
+    "name": "FOGSI Tamil Nadu Chapter CMEs",
+    "date": "2026-08-15",
+    "dateDisplay": "Monthly | Ongoing",
+    "location": "Multiple cities, Tamil Nadu",
+    "month": "August 2026",
+    "priority": "situational",
+    "tags": ["t-ivf", "t-si"],
+    "about": "FOGSI (Federation of Obstetric and Gynaecological Societies of India) Tamil Nadu and IFS South Tamil Nadu chapters run monthly CME events. 47,000+ OBGyn members nationally. CMEs gather 30–150 specialists in a room, trust-based format. OBGyns are Fertiva Pro's primary referral channel.",
+    "keyFacts": ["Monthly events", "47,000+ FOGSI members nationally", "IVF referral channel", "Low cost, home ground"],
+    "participation": [
+      {
+        "icon": "🤝",
+        "name": "CME Sponsorship",
+        "fee": "₹10,000–25,000 per CME",
+        "feeClass": "fee-paid",
+        "detail": "Sponsor a monthly CME to get 5–10 min product mention or demo slot. Contact IFS South Tamil Nadu or FOGSI TN chapter secretary.",
+        "verdict": "do",
+        "verdictLabel": "✓ Sponsor 2–3 per quarter — highest referral ROI per rupee spent",
+        "deadline": "Ongoing — contact IFS/FOGSI TN chapter directly",
+        "deadlineDate": "2026-08-01"
+      }
+    ],
+    "attendYes": true,
+    "reasons": [
+      "OBGyns refer patients to IVF clinics — strongest referral channel for Fertiva Pro's end-users.",
+      "₹10–25K per CME sponsorship gets you in front of 30–150 specialists.",
+      "Tamil Nadu chapters = home ground, no significant travel cost."
+    ],
+    "note": "💡 Action: Email IFS South TN chapter and FOGSI TN chapter secretary. Request sponsor slot for Aug/Sep CME. Budget ₹60K for 3 events across Q3.",
+    "urls": [
+      { "label": "IFS Tamil Nadu", "url": "https://indianfertilitysociety.org/", "cls": "btn-primary" }
+    ],
+    "source": "https://indianfertilitysociety.org",
+    "lastUpdated": "2026-07-05"
+  }
+]

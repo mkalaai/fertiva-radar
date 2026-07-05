@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fertiva Event Radar | %%EVENT_COUNT%% Events</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0F1629;--navy-mid:#1A2540;--navy-card:#1E2A48;
+  --magenta:#E8197A;--magenta-dim:rgba(232,25,122,.15);--magenta-glow:rgba(232,25,122,.35);
+  --teal:#00D4B8;--teal-dim:rgba(0,212,184,.12);
+  --amber:#F59E0B;--amber-dim:rgba(245,158,11,.12);
+  --purple:#A78BFA;--purple-dim:rgba(167,139,250,.12);
+  --slate:#94A3B8;--slate-light:#CBD5E1;
+  --surface:#1E2A48;--surface-hover:#253357;
+  --border:rgba(148,163,184,.12);
+  --text-primary:#F0F4FF;--text-secondary:#94A3B8;
+}
+body{font-family:'Inter',sans-serif;background:var(--navy);color:var(--text-primary);min-height:100vh;overflow-x:hidden}
+
+/* HEADER */
+.header{background:var(--navy-mid);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:58px;position:sticky;top:0;z-index:100}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:30px;height:30px;background:var(--magenta);border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;color:#fff}
+.logo-text{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px}
+.logo-text span{color:var(--magenta)}
+.header-pills{display:flex;gap:10px;align-items:center}
+.header-pill{font-size:11px;color:var(--slate);background:rgba(148,163,184,.08);padding:3px 10px;border-radius:20px}
+.header-pill strong{color:var(--magenta);font-size:13px;font-family:'Space Grotesk',sans-serif}
+
+/* STATS */
+.stats-row{display:flex;gap:1px;background:var(--border);border-bottom:1px solid var(--border)}
+.stat-tile{flex:1;padding:14px 20px;background:var(--navy);display:flex;flex-direction:column;gap:3px}
+.stat-tile .num{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;line-height:1}
+.stat-tile .lbl{font-size:10px;color:var(--slate);text-transform:uppercase;letter-spacing:.7px}
+.c-mag{color:var(--magenta)}.c-teal{color:var(--teal)}.c-amb{color:var(--amber)}.c-pur{color:var(--purple)}.c-wht{color:var(--text-primary)}
+
+/* FILTERS */
+.filters-bar{padding:16px 24px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--border)}
+.flabel{font-size:10px;font-weight:600;color:var(--slate);text-transform:uppercase;letter-spacing:.8px;margin-right:2px}
+.chip{padding:5px 12px;border-radius:20px;font-size:11px;font-weight:500;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--slate-light);transition:all .15s;font-family:'Inter',sans-serif}
+.chip:hover{border-color:var(--slate);color:var(--text-primary)}
+.chip.active{background:var(--magenta);border-color:var(--magenta);color:#fff}
+.search-wrap{margin-left:auto;display:flex;align-items:center;gap:7px;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:6px 12px;min-width:180px}
+.search-wrap input{background:none;border:none;outline:none;color:var(--text-primary);font-size:12px;font-family:'Inter',sans-serif;width:100%}
+.search-wrap input::placeholder{color:var(--slate)}
+
+/* TIMELINE */
+.timeline{padding:24px;display:flex;flex-direction:column;gap:28px}
+.month-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.month-label{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:600;color:var(--slate);text-transform:uppercase;letter-spacing:1px}
+.month-line{flex:1;height:1px;background:var(--border)}
+.month-count{font-size:10px;color:var(--slate);background:var(--surface);padding:2px 8px;border-radius:10px}
+.events-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(370px,1fr));gap:12px}
+
+/* CARD */
+.event-card{background:var(--surface);border-radius:14px;border:1px solid var(--border);overflow:hidden;transition:transform .15s,box-shadow .15s,border-color .15s;cursor:pointer;display:flex;flex-direction:column;position:relative}
+.event-card:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,.4)}
+.event-card.must-attend{border-color:rgba(232,25,122,.25)}
+.event-card.must-attend:hover{border-color:rgba(232,25,122,.55);box-shadow:0 12px 40px rgba(232,25,122,.12)}
+.event-card.strong-value{border-color:rgba(0,212,184,.18)}
+.event-card.strong-value:hover{border-color:rgba(0,212,184,.45);box-shadow:0 12px 40px rgba(0,212,184,.08)}
+.event-card.award{border-color:rgba(167,139,250,.2)}
+.event-card.award:hover{border-color:rgba(167,139,250,.5);box-shadow:0 12px 40px rgba(167,139,250,.1)}
+.event-card.skip{opacity:.55}
+.event-card.skip:hover{opacity:.8}
+
+/* countdown bar */
+.cbar{height:3px;width:100%;background:var(--border);position:relative;overflow:hidden}
+.cfill{height:100%;position:relative}
+.must-attend .cfill{background:linear-gradient(90deg,var(--magenta-dim),var(--magenta))}
+.strong-value .cfill{background:linear-gradient(90deg,var(--teal-dim),var(--teal))}
+.award .cfill{background:linear-gradient(90deg,var(--purple-dim),var(--purple))}
+.situational .cfill{background:linear-gradient(90deg,var(--amber-dim),var(--amber))}
+.skip .cfill{background:linear-gradient(90deg,rgba(148,163,184,.05),rgba(148,163,184,.25))}
+
+/* card body */
+.card-top{padding:16px 18px 12px}
+.card-meta{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:10px}
+.pbadge{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:20px;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;flex-shrink:0}
+.b-must{background:var(--magenta-dim);color:var(--magenta);border:1px solid rgba(232,25,122,.3)}
+.b-strong{background:var(--teal-dim);color:var(--teal);border:1px solid rgba(0,212,184,.3)}
+.b-award{background:var(--purple-dim);color:var(--purple);border:1px solid rgba(167,139,250,.3)}
+.b-sit{background:var(--amber-dim);color:var(--amber);border:1px solid rgba(245,158,11,.3)}
+.b-skip{background:rgba(148,163,184,.08);color:var(--slate);border:1px solid rgba(148,163,184,.2)}
+.bdot{width:5px;height:5px;border-radius:50%;background:currentColor}
+.days-away{font-family:'Space Grotesk',sans-serif;font-size:10px;color:var(--slate);white-space:nowrap}
+.days-urgent{color:var(--magenta);font-weight:600}
+.deadline-tag{font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(245,158,11,.15);color:var(--amber);font-weight:600;border:1px solid rgba(245,158,11,.25);white-space:nowrap}
+.event-name{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;line-height:1.3;color:var(--text-primary);margin-bottom:5px}
+.event-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:11px;color:var(--slate);margin-bottom:12px}
+.event-about{font-size:12px;color:var(--slate-light);line-height:1.6;margin-bottom:12px}
+.tag-row{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
+.tag{padding:2px 7px;border-radius:4px;font-size:9.5px;font-weight:600;text-transform:uppercase;letter-spacing:.4px}
+.t-ivf{background:var(--magenta-dim);color:var(--magenta)}
+.t-ht{background:var(--teal-dim);color:var(--teal)}
+.t-ai{background:var(--purple-dim);color:var(--purple)}
+.t-si{background:rgba(251,146,60,.12);color:#FB923C}
+.t-gen{background:rgba(148,163,184,.1);color:var(--slate)}
+.t-award{background:rgba(167,139,250,.15);color:var(--purple)}
+
+/* participation options */
+.part-section{border-top:1px solid var(--border);padding:12px 18px 14px;background:rgba(0,0,0,.12)}
+.part-label{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--slate);margin-bottom:8px}
+.part-options{display:flex;flex-direction:column;gap:5px}
+.part-opt{display:flex;align-items:flex-start;gap:8px;padding:7px 10px;border-radius:8px;background:rgba(255,255,255,.03);border:1px solid var(--border)}
+.part-opt-icon{font-size:13px;flex-shrink:0;margin-top:1px}
+.part-opt-body{flex:1;min-width:0}
+.part-opt-name{font-size:11px;font-weight:600;color:var(--text-primary);margin-bottom:1px}
+.part-opt-fee{font-size:10.5px;color:var(--slate)}
+.part-opt-rec{font-size:10px;font-weight:600;margin-top:3px}
+.rec-yes{color:var(--teal)}
+.rec-maybe{color:var(--amber)}
+.rec-no{color:var(--slate)}
+
+/* MODAL */
+.modal-backdrop{display:none;position:fixed;inset:0;background:rgba(9,13,28,.88);backdrop-filter:blur(10px);z-index:200;align-items:center;justify-content:center;padding:20px}
+.modal-backdrop.open{display:flex}
+.modal{background:var(--navy-card);border:1px solid rgba(148,163,184,.2);border-radius:18px;max-width:640px;width:100%;max-height:92vh;overflow-y:auto;box-shadow:0 40px 100px rgba(0,0,0,.6)}
+.modal-top{padding:22px 22px 0;display:flex;justify-content:space-between;align-items:flex-start}
+.modal-close{background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--slate);cursor:pointer;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;transition:all .15s}
+.modal-close:hover{color:var(--text-primary);border-color:var(--slate)}
+.modal-body{padding:16px 22px 26px}
+.modal-title{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin:8px 0 6px}
+.modal-info-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px;font-size:12px;color:var(--slate)}
+.msec{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--slate);margin:16px 0 8px}
+.modal-about{font-size:13px;color:var(--slate-light);line-height:1.7}
+.modal-keyfacts{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.kf{padding:3px 9px;border-radius:4px;font-size:10px;font-weight:600;background:rgba(148,163,184,.1);color:var(--slate-light)}
+
+/* modal participation table */
+.mpart-table{display:flex;flex-direction:column;gap:6px}
+.mpart-row{border:1px solid var(--border);border-radius:10px;padding:12px 14px;background:rgba(255,255,255,.02)}
+.mpart-row.rec-row{border-color:rgba(0,212,184,.25);background:rgba(0,212,184,.04)}
+.mpart-header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
+.mpart-name{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;color:var(--text-primary)}
+.mpart-fee-badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.fee-free{background:rgba(0,212,184,.12);color:var(--teal)}
+.fee-paid{background:rgba(245,158,11,.12);color:var(--amber)}
+.fee-contact{background:rgba(148,163,184,.1);color:var(--slate)}
+.mpart-detail{font-size:11.5px;color:var(--slate-light);line-height:1.6;margin-bottom:6px}
+.mpart-verdict{font-size:11px;font-weight:600;display:flex;align-items:center;gap:5px}
+.v-do{color:var(--teal)}.v-consider{color:var(--amber)}.v-skip{color:var(--slate)}
+.mpart-deadline{font-size:10px;color:var(--amber);margin-top:4px;display:flex;align-items:center;gap:4px}
+
+/* reasons list */
+.reasons{list-style:none;display:flex;flex-direction:column;gap:7px}
+.reasons li{font-size:12.5px;color:var(--slate-light);line-height:1.6;padding-left:18px;position:relative}
+.reasons li::before{content:'→';position:absolute;left:0;color:var(--magenta);font-size:11px}
+.note-row{background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.2);border-radius:8px;padding:10px 12px;font-size:12px;color:#FCD34D;line-height:1.6;margin-top:10px}
+
+/* apply buttons */
+.apply-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.apply-btn{display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:9px;font-size:12px;font-weight:600;text-decoration:none;cursor:pointer;border:none;font-family:'Inter',sans-serif;transition:opacity .15s}
+.apply-btn:hover{opacity:.82}
+.btn-primary{background:var(--magenta);color:#fff}
+.btn-secondary{background:var(--surface);color:var(--slate-light);border:1px solid var(--border)}
+.btn-award{background:var(--purple-dim);color:var(--purple);border:1px solid rgba(167,139,250,.3)}
+
+/* registered indicator */
+.reg-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);display:inline-block;margin-left:4px;box-shadow:0 0 6px var(--teal)}
+
+/* EMPTY */
+.empty{text-align:center;padding:60px 20px;color:var(--slate)}
+.empty-icon{font-size:36px;margin-bottom:10px}
+
+/* responsive */
+@media(max-width:680px){
+  .stats-row{flex-wrap:wrap}
+  .stat-tile{flex:1 1 45%}
+  .events-grid{grid-template-columns:1fr}
+  .timeline{padding:14px}
+  .filters-bar{padding:12px 14px}
+  .header{padding:0 14px}
+  .search-wrap{min-width:unset;width:100%;margin-left:0}
+}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-thumb{background:rgba(148,163,184,.3);border-radius:3px}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <div class="logo-mark">F</div>
+    <div class="logo-text">Fertiva <span>Event Radar</span></div>
+  </div>
+  <div class="header-pills">
+    <div class="header-pill">Updated <strong>%%LAST_UPDATED%%</strong></div>
+    <div class="header-pill">Must-attend <strong id="hc-must">0</strong></div>
+    <div class="header-pill">Next event <strong id="hc-next">—</strong></div>
+    <div class="header-pill">Awards open <strong id="hc-awards">0</strong></div>
+  </div>
+</header>
+
+<div class="stats-row">
+  <div class="stat-tile"><div class="num c-wht" id="s-total">0</div><div class="lbl">Total Events</div></div>
+  <div class="stat-tile"><div class="num c-mag" id="s-must">0</div><div class="lbl">Must Attend</div></div>
+  <div class="stat-tile"><div class="num c-teal" id="s-strong">0</div><div class="lbl">Strong Value</div></div>
+  <div class="stat-tile"><div class="num c-pur" id="s-award">0</div><div class="lbl">Award Opps</div></div>
+  <div class="stat-tile"><div class="num c-amb" id="s-sit">0</div><div class="lbl">Situational</div></div>
+</div>
+
+<div class="filters-bar">
+  <span class="flabel">Filter</span>
+  <button class="chip active" data-filter="all">All</button>
+  <button class="chip" data-filter="must-attend">🔴 Must Attend</button>
+  <button class="chip" data-filter="strong-value">🟠 Strong Value</button>
+  <button class="chip" data-filter="award">🏆 Awards</button>
+  <button class="chip" data-filter="situational">🟡 Situational</button>
+  <button class="chip" data-filter="skip">Skip</button>
+  <div class="search-wrap">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" id="search-input" placeholder="Search events, cities…">
+  </div>
+</div>
+
+<div class="timeline" id="timeline"></div>
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="modal-backdrop" onclick="closeModal(event)">
+  <div class="modal" id="modal-box">
+    <div class="modal-top">
+      <div style="padding-right:10px">
+        <div id="m-badge" style="margin-bottom:6px"></div>
+        <div class="modal-title" id="m-title"></div>
+      </div>
+      <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-info-row" id="m-info"></div>
+      <div class="msec">About this Event</div>
+      <div class="modal-about" id="m-about"></div>
+      <div class="modal-keyfacts" id="m-kf"></div>
+      <div class="msec">Participation Options & Fees</div>
+      <div class="mpart-table" id="m-part"></div>
+      <div class="msec" id="m-why-label"></div>
+      <ul class="reasons" id="m-why"></ul>
+      <div class="note-row" id="m-note" style="display:none"></div>
+      <div class="apply-btns" id="m-btns"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const TODAY = new Date('2026-07-05');
+function daysUntil(d){return Math.round((new Date(d)-TODAY)/(864e5))}
+function urgPct(d){const x=daysUntil(d);if(x<=0)return 100;if(x>=200)return 8;return Math.max(8,100-Math.round(x/200*92))}
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// EVENT DATA  (fetched fresh on every load via this inline dataset)
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/* %%EVENTS_DATA%% */
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// STATE
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+let activeFilter='all', searchQ='';
+const regIds=new Set(JSON.parse(localStorage.getItem('fertiva_reg')||'[]'));
+function saveReg(){localStorage.setItem('fertiva_reg',JSON.stringify([...regIds]))}
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// HELPERS
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+const PRIORITY_META={
+  'must-attend':['b-must','🔴 Must Attend'],
+  'strong-value':['b-strong','🟠 Strong Value'],
+  'award':['b-award','🏆 Award / Apply'],
+  'situational':['b-sit','🟡 Situational'],
+  'skip':['b-skip','⚪ Skip']
+};
+const TAG_META={'t-ivf':['IVF/ART'],'t-ht':['HealthTech'],'t-ai':['AI/Digital'],'t-si':['South India'],'t-gen':['Healthcare'],'t-award':['Award Opp']};
+const VERDICT_COLOR={'do':'rec-yes','consider':'rec-maybe','skip':'rec-no'};
+
+function deadlineDaysStr(d){
+  if(!d)return null;
+  const x=daysUntil(d);
+  if(x<0)return'Deadline passed';
+  if(x===0)return'⚡ Deadline today!';
+  if(x<=7)return`⚡ ${x}d left`;
+  if(x<=30)return`${x}d left`;
+  return null;
+}
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// RENDER
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+function filtered(){
+  return EVENTS.filter(e=>{
+    const mf=activeFilter==='all'||e.priority===activeFilter;
+    const q=searchQ.toLowerCase();
+    const ms=!q||e.name.toLowerCase().includes(q)||e.location.toLowerCase().includes(q)||e.about.toLowerCase().includes(q)||e.tags.some(t=>t.includes(q));
+    return mf&&ms;
+  });
+}
+
+function cardHtml(e){
+  const [bc,bl]=PRIORITY_META[e.priority]||PRIORITY_META.skip;
+  const days=daysUntil(e.date);
+  const dStr=days<0?'Past':(days===0?'Today':`in ${days}d`);
+  const dCls=days>=0&&days<=14?'days-urgent':'';
+  const pct=urgPct(e.date);
+  const isReg=regIds.has(e.id);
+  const regDot=isReg?'<span class="reg-dot" title="Registered"></span>':'';
+
+  // earliest apply deadline
+  const allDeadlines=e.participation.filter(p=>p.deadlineDate).map(p=>({d:p.deadlineDate,label:deadlineDaysStr(p.deadlineDate)})).filter(x=>x.label&&!x.label.includes('passed'));
+  const soonest=allDeadlines.sort((a,b)=>new Date(a.d)-new Date(b.d))[0];
+
+  const partPreview=e.participation.slice(0,2).map(p=>`
+    <div class="part-opt">
+      <div class="part-opt-icon">${p.icon}</div>
+      <div class="part-opt-body">
+        <div class="part-opt-name">${p.name}</div>
+        <div class="part-opt-fee">${p.fee}</div>
+        <div class="part-opt-rec ${VERDICT_COLOR[p.verdict]||''}">${p.verdictLabel}</div>
+      </div>
+    </div>`).join('');
+
+  return`<div class="event-card ${e.priority}" data-id="${e.id}" onclick="openModal(${e.id})">
+  <div class="cbar"><div class="cfill" style="width:${pct}%"></div></div>
+  <div class="card-top">
+    <div class="card-meta">
+      <span class="pbadge ${bc}"><span class="bdot"></span>${bl}${regDot}</span>
+      <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+        ${soonest?`<span class="deadline-tag">⏰ ${soonest.label}</span>`:''}
+        <span class="days-away ${dCls}">${dStr}</span>
+      </div>
+    </div>
+    <div class="event-name">${e.name}</div>
+    <div class="event-meta">
+      <span>📅 ${e.dateDisplay}</span>
+      <span>📍 ${e.location}</span>
+    </div>
+    <div class="event-about">${e.about.slice(0,120)}${e.about.length>120?'…':''}</div>
+    <div class="tag-row">${e.tags.map(t=>`<span class="tag ${t}">${(TAG_META[t]||[t])[0]}</span>`).join('')}</div>
+  </div>
+  <div class="part-section">
+    <div class="part-label">Participation Options</div>
+    <div class="part-options">${partPreview}${e.participation.length>2?`<div style="font-size:10px;color:var(--slate);padding:4px 10px">+${e.participation.length-2} more options — click to see all</div>`:''}</div>
+  </div>
+</div>`;
+}
+
+function renderTimeline(){
+  const f=filtered();
+  const tl=document.getElementById('timeline');
+  if(!f.length){tl.innerHTML='<div class="empty"><div class="empty-icon">🔍</div><div class="empty-text">No events match.</div></div>';return}
+  const groups={},order=[];
+  f.forEach(e=>{if(!groups[e.month]){groups[e.month]=[];order.push(e.month)}groups[e.month].push(e)});
+  tl.innerHTML=order.map(m=>`<div>
+    <div class="month-header">
+      <div class="month-label">${m}</div>
+      <div class="month-line"></div>
+      <div class="month-count">${groups[m].length} event${groups[m].length!==1?'s':''}</div>
+    </div>
+    <div class="events-grid">${groups[m].map(e=>cardHtml(e)).join('')}</div>
+  </div>`).join('');
+}
+
+function updateStats(){
+  document.getElementById('s-total').textContent=EVENTS.length;
+  document.getElementById('s-must').textContent=EVENTS.filter(e=>e.priority==='must-attend').length;
+  document.getElementById('s-strong').textContent=EVENTS.filter(e=>e.priority==='strong-value').length;
+  document.getElementById('s-award').textContent=EVENTS.filter(e=>e.priority==='award').length;
+  document.getElementById('s-sit').textContent=EVENTS.filter(e=>e.priority==='situational').length;
+  document.getElementById('hc-must').textContent=EVENTS.filter(e=>e.priority==='must-attend').length;
+  document.getElementById('hc-awards').textContent=EVENTS.filter(e=>e.priority==='award').length;
+  const up=EVENTS.filter(e=>daysUntil(e.date)>0).sort((a,b)=>daysUntil(a.date)-daysUntil(b.date));
+  if(up.length)document.getElementById('hc-next').textContent=daysUntil(up[0].date)+'d';
+}
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// MODAL
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+function openModal(id){
+  const e=EVENTS.find(x=>x.id===id);if(!e)return;
+  const [bc,bl]=PRIORITY_META[e.priority]||PRIORITY_META.skip;
+  const isReg=regIds.has(e.id);
+
+  document.getElementById('m-badge').innerHTML=`<span class="pbadge ${bc}"><span class="bdot"></span>${bl}${isReg?'<span class="reg-dot"></span>':''}</span>`;
+  document.getElementById('m-title').textContent=e.name;
+  document.getElementById('m-info').innerHTML=`<span>📅 ${e.dateDisplay}</span><span>📍 ${e.location}</span><span>${e.tags.map(t=>(TAG_META[t]||[t])[0]).join(' · ')}</span>`;
+  document.getElementById('m-about').innerHTML=e.about;
+  document.getElementById('m-kf').innerHTML=e.keyFacts.map(f=>`<span class="kf">${f}</span>`).join('');
+
+  // participation table
+  document.getElementById('m-part').innerHTML=e.participation.map(p=>{
+    const ddStr=p.deadlineDate?deadlineDaysStr(p.deadlineDate):null;
+    return`<div class="mpart-row ${p.verdict==='do'?'rec-row':''}">
+      <div class="mpart-header">
+        <div class="mpart-name">${p.icon} ${p.name}</div>
+        <span class="mpart-fee-badge ${p.feeClass}">${p.fee}</span>
+      </div>
+      <div class="mpart-detail">${p.detail}</div>
+      <div class="mpart-verdict v-${p.verdict}">${p.verdictLabel}</div>
+      ${ddStr?`<div class="mpart-deadline">⏰ Deadline: ${p.deadline||p.deadlineDate} (${ddStr})</div>`:''}
+    </div>`;
+  }).join('');
+
+  const wlabel=document.getElementById('m-why-label');
+  wlabel.textContent=e.attendYes?'Why You Should Attend':'Why to Skip';
+  wlabel.className=`msec ${e.attendYes?'c-mag':''}`;
+  document.getElementById('m-why').innerHTML=e.reasons.map(r=>`<li>${r}</li>`).join('');
+
+  const mn=document.getElementById('m-note');
+  if(e.note){mn.style.display='block';mn.textContent=e.note}else{mn.style.display='none'}
+
+  // action buttons
+  const btnsHtml=e.urls.map(u=>`<a class="apply-btn ${u.cls}" href="${u.url}" target="_blank" rel="noopener">${u.label} ↗</a>`).join('');
+  const regBtn=`<button class="apply-btn ${isReg?'btn-secondary':'btn-secondary'}" onclick="toggleReg(${e.id})">${isReg?'✓ Marked as Registered':'Mark as Registered'}</button>`;
+  document.getElementById('m-btns').innerHTML=btnsHtml+regBtn;
+
+  document.getElementById('modal-backdrop').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function toggleReg(id){
+  if(regIds.has(id))regIds.delete(id);else regIds.add(id);
+  saveReg();closeModalDirect();renderTimeline();openModal(id);
+}
+function closeModal(e){if(e.target===document.getElementById('modal-backdrop'))closeModalDirect()}
+function closeModalDirect(){document.getElementById('modal-backdrop').classList.remove('open');document.body.style.overflow=''}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModalDirect()});
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// FILTERS
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+document.querySelectorAll('.chip[data-filter]').forEach(c=>c.addEventListener('click',()=>{
+  document.querySelectorAll('.chip[data-filter]').forEach(x=>x.classList.remove('active'));
+  c.classList.add('active');activeFilter=c.dataset.filter;renderTimeline();
+}));
+document.getElementById('search-input').addEventListener('input',e=>{searchQ=e.target.value;renderTimeline()});
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// INIT
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+updateStats();
+renderTimeline();
+</script>
+</body>
+</html>

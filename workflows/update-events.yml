@@ -1,0 +1,41 @@
+name: Update Fertiva Events
+
+on:
+  schedule:
+    # Every Sunday at 6:00 AM IST (00:30 UTC)
+    - cron: '30 0 * * 0'
+  workflow_dispatch: # Also allows manual trigger from GitHub UI
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Needed to commit updated files back to repo
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic requests
+
+      - name: Run event updater
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/update_events.py
+
+      - name: Inject events into index.html
+        run: python scripts/build.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "Fertiva Event Bot"
+          git config user.email "bot@fertiva.pro"
+          git add data/events.json index.html
+          git diff --staged --quiet || git commit -m "Auto-update: events refreshed $(date -u '+%Y-%m-%d')"
+          git push
